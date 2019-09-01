@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE language SYSTEM "language.dtd">
+<language name="G-code" extensions="*.gcode" mimetype="text/x.gcode" kateversion="5.0">
+  <highlighting>
+    <contexts>
+      <context attribute="Normal" lineEndContext="#pop" name="normal" >
+        <AnyChar attribute="Command" context="command" String="GMT" firstNonSpace="true" />
+        <AnyChar attribute="Parameter" context="parameter" String="ABCDEFGHIJKLMNOPQRSTUVWXYZ" />
+        <DetectChar attribute="Comment" context="comment" char=";" />
+      </context>
+      <context attribute="Command" lineEndContext="#pop" name="command" >
+        <DetectSpaces attribute="Normal" context="normal" />
+      </context>
+      <context attribute="Parameter" lineEndContext="#pop" name="parameter" >
+        <AnyChar attribute="Value" context="value" String="-0123456789." />
+        <DetectSpaces attribute="Normal" context="normal" />
+      </context>
+      <context attribute="Value" lineEndContext="#pop" name="value" >
+        <DetectSpaces attribute="Normal" context="normal" />
+      </context>
+      <context attribute="Comment" lineEndContext="#pop" name="comment" />
+    </contexts>
+    <itemDatas>
+      <itemData name="Normal" defStyleNum="dsNormal" />
+      <itemData name="Command" defStyleNum="dsVariable" />
+      <itemData name="Comment" defStyleNum="dsComment" />
+      <itemData name="Parameter" defStyleNum="dsDataType" />
+      <itemData name="Value" defStyleNum="dsNormal" />
+    </itemDatas>
+  </highlighting>
+  <general>
+    <comments>
+      <comment name="singleLine" start=";"/>
+    </comments>
+  </general>
+</language>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<snippets>
+<snippet group="G-code" trigger="G0" id="g0x" complement="Rapid X-move">G0 X$x$ Y$y$</snippet>
+<snippet group="G-code" trigger="G0" id="g0y" complement="Rapid Y-move">G0 X$x$ Y$y$</snippet>
+<snippet group="G-code" trigger="G0" id="g0z" complement="Rapid Z-move">G0 Z$z$</snippet>
+<snippet group="G-code" trigger="G0" id="g0xy" complement="Rapid XY-move">G0 X$x$ Y$y$</snippet>
+
+<snippet group="G-code" trigger="G1" id="g1x" complement="Linear X-move">G1 X$x$</snippet>
+<snippet group="G-code" trigger="G1" id="g1y" complement="Linear Y-move">G1 Y$y$</snippet>
+<snippet group="G-code" trigger="G1" id="g1z" complement="Linear Z-move">G1 Z$z$</snippet>
+<snippet group="G-code" trigger="G1" id="g1xy" complement="Linear XY-move">G1 X$x$ Y$y$</snippet>
+<snippet group="G-code" trigger="G1" id="g1f" complement="Linear feedrate">G1 F$feedrate$</snippet>
+
+<snippet group="G-code" trigger="T" id="t" complement="Tool change">T$n$</snippet>
+</snippets>
